@@ -1,0 +1,146 @@
+
+
+<html>
+
+<h1> Home Automation prototype </h1>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script type="text/javascript">// <![CDATA[
+
+$(document).ready(function() {
+
+$('#on').click(function(){
+
+var a= new XMLHttpRequest();
+
+a.open("GET", "on.php");
+
+a.onreadystatechange=function(){
+
+if(a.readyState==4){ if(a.status ==200){
+
+ } else alert ("http error"); } }
+
+a.send();
+
+});
+
+});
+
+$(document).ready(function() {
+
+$('#led1').click(function(){
+
+var a= new XMLHttpRequest();
+
+a.open("GET", "led1.php");
+
+a.onreadystatechange=function(){
+
+if(a.readyState==4){ if(a.status ==200){
+
+ } else alert ("http error"); } }
+
+a.send();
+
+});
+
+});
+
+$(document).ready(function() {
+
+$('#led2').click(function(){
+
+var a= new XMLHttpRequest();
+
+a.open("GET", "led2.php");
+
+a.onreadystatechange=function(){
+
+if(a.readyState==4){ if(a.status ==200){
+
+ } else alert ("http error"); } }
+
+a.send();
+
+});
+
+});
+$(document).ready(function() {
+
+$('#led1off').click(function(){
+
+var a= new XMLHttpRequest();
+
+a.open("GET", "led1off.php");
+
+a.onreadystatechange=function(){
+
+if(a.readyState==4){ if(a.status ==200){
+
+ } else alert ("http error"); } }
+
+a.send();
+
+});
+
+});
+
+$(document).ready(function() {
+
+$('#led2off').click(function(){
+
+var a= new XMLHttpRequest();
+
+a.open("GET", "led2off.php");
+
+a.onreadystatechange=function(){
+
+if(a.readyState==4){ if(a.status ==200){
+
+ } else alert ("http error"); } }
+
+a.send();
+
+});
+
+});
+
+$(document).ready(function()
+
+{ $('#off').click(function(){
+
+var a= new XMLHttpRequest();
+
+a.open("GET", "off.php");
+
+a.onreadystatechange=function(){
+
+if(a.readyState==4){
+
+if(a.status ==200){
+
+ } else alert ("http error"); } }
+
+a.send();
+
+});
+
+});
+
+</script>
+
+<button id="on" type="button"> LED 1 On </button>
+
+<button id="off" type="button"> LED 1 off </button>
+
+<button id="led1" type="button"> LED 2 On </button>
+
+<button id="led1off" type="button"> LED 2 off </button>
+
+<button id="led2" type="button"> LED 3 On </button>
+
+<button id="led2off" type="button"> LED 3 off </button>
+
+</html>
